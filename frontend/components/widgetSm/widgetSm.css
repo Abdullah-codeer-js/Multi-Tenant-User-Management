@@ -1,0 +1,94 @@
+.widgetSm {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  min-width: 0;
+}
+
+.widgetSmTitle {
+  margin: 0 0 20px;
+  color: #1f2937;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.widgetSmList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.widgetSmListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.widgetSmListItem:last-child {
+  border-bottom: none;
+}
+
+.widgetSmUser {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.widgetSmUsername {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.widgetSmUserTitle {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.widgetSmButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  color: #4f46e5;
+  background-color: #eef2ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.widgetSmButton:hover {
+  background-color: #e0e7ff;
+  transform: translateY(-1px);
+}
+
+.widgetSmButton:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 3px;
+}
+
+.widgetSmIcon {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 480px) {
+  .widgetSm {
+    padding: 16px;
+  }
+
+  .widgetSmTitle {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,106 @@
+.topbar {
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  border-bottom: 1px solid #e8edf4;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 2px 12px rgba(27, 48, 78, 0.035);
+  backdrop-filter: blur(12px);
+}
+
+.topbarWrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(18px, 3vw, 42px);
+}
+
+.logo {
+  color: #21324a;
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 750;
+  letter-spacing: -0.65px;
+}
+
+.logo::before {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 11px 1px 0;
+  border-radius: 3px;
+  background: linear-gradient(135deg, #6889ff, #3b60d9);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+}
+
+.topbarIconContainer {
+  position: relative;
+  margin-right: 10px;
+  color: #555;
+  cursor: pointer;
+}
+
+.topbarLogoutButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: 8px;
+  padding: 9px 13px;
+  border: 1px solid #dfe6ef;
+  border-radius: 9px;
+  background: #fff;
+  color: #44515a;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.topbarLogoutButton:hover:not(:disabled) {
+  border-color: #cdd8e8;
+  background-color: #f5f7fb;
+}
+
+.topbarLogoutButton:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.topIconBadge {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  display: flex;
+  width: 15px;
+  height: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ef4444;
+  color: #fff;
+  font-size: 10px;
+}
+
+.topAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    height: 64px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+}

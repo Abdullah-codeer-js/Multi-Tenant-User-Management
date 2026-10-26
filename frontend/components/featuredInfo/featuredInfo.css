@@ -1,0 +1,93 @@
+.featured {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+.featuredItem {
+  min-width: 0;
+  padding: 22px 24px;
+  border: 1px solid #e9eef5;
+  border-radius: 14px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.featuredItem:hover {
+  box-shadow: 0 14px 32px rgba(27, 48, 78, 0.09);
+  transform: translateY(-2px);
+}
+
+.featuredHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.featuredTitle {
+  color: #738198;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.featuredMoneyContainer {
+  display: flex;
+  align-items: center;
+  margin: 15px 0 5px;
+}
+
+.featuredMoney {
+  color: #1d2b40;
+  font-size: 32px;
+  font-weight: 750;
+  letter-spacing: -1px;
+}
+
+.featuredMoneyRate {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.featuredIcon {
+  width: 19px;
+  height: 19px;
+  color: #22a779;
+}
+
+.featuredIcon.negative {
+  color: #e34f67;
+}
+
+.featuredIcon.usersIcon {
+  color: #4169e1;
+}
+
+.featuredIcon.newUsersIcon {
+  color: #13a985;
+}
+
+.featuredIcon.adminIcon {
+  color: #9a63d6;
+}
+
+.featuredSub {
+  color: #98a4b5;
+  font-size: 12px;
+}
+
+@media (max-width: 860px) {
+  .featured {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .featured {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,141 @@
+
+.widgetLg {
+  flex: 2;
+  min-width: 0;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.widgetLgTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 24px;
+}
+
+.widgetLgTableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.widgetLgTable {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.widgetLgTr {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.widgetLgTr:last-child {
+  border-bottom: none;
+}
+
+.widgetLgTh {
+  padding: 12px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+.widgetLgTable td {
+  padding: 14px 10px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.widgetLgUser {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 180px;
+}
+
+.widgetLgAvatar {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25%;
+  background-color: #eef2ff;
+  color: #41acf3;
+  font-weight: 700;
+}
+
+.widgetLgUserInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.widgetLgName {
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.widgetLgEmail {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.widgetLgDate {
+  white-space: nowrap;
+}
+
+.widgetLgRole,
+.widgetLgStatus {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.widgetLgRole.admin {
+  color: #6d28d9;
+  background-color: #ede9fe;
+}
+
+.widgetLgRole.manager {
+  color: #1d4ed8;
+  background-color: #dbeafe;
+}
+
+.widgetLgRole.employee {
+  color: #475569;
+  background-color: #f1f5f9;
+}
+
+.widgetLgStatus.active {
+  color: #047857;
+  background-color: #d1fae5;
+}
+
+.widgetLgStatus.pending {
+  color: #b45309;
+  background-color: #fef3c7;
+}
+
+.widgetLgStatus.inactive {
+  color: #b91c1c;
+  background-color: #fee2e2;
+}
+
+@media (max-width: 768px) {
+  .widgetLg {
+    padding: 16px;
+  }
+
+  .widgetLgTitle {
+    font-size: 18px;
+  }
+}

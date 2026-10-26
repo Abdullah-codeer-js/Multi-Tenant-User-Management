@@ -1,0 +1,75 @@
+
+.customButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.customButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.customButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.customButton.primary {
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+.customButton.primary:hover:not(:disabled) {
+  background-color: #4338ca;
+}
+
+.customButton.success {
+  background-color: #059669;
+  color: #fff;
+}
+
+.customButton.success:hover:not(:disabled) {
+  background-color: #047857;
+}
+
+.customButton.danger {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+.customButton.danger:hover:not(:disabled) {
+  background-color: #b91c1c;
+}
+
+.customButton.secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.customButton.secondary:hover:not(:disabled) {
+  background-color: #e5e7eb;
+}
+
+.customButton.outline {
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.customButton.outline:hover:not(:disabled) {
+  background-color: #f9fafb;
+}
+
+.customButtonIcon {
+  display: inline-flex;
+  align-items: center;
+}

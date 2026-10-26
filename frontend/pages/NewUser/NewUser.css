@@ -1,0 +1,99 @@
+.newUser {
+  max-width: 920px;
+}
+
+.newUserTitle {
+  margin: 0 0 18px;
+  color: #1d2b40;
+  font-size: 30px;
+  letter-spacing: -0.8px;
+}
+
+.newUserBackButton {
+  min-height: 40px;
+  margin: 0 0 20px;
+  padding: 0 15px;
+  border: 1px solid #dfe6ef;
+  border-radius: 9px;
+  background: #fff;
+  color: #4f6076;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.newUserBackButton:hover {
+  background: #f7f9fc;
+}
+
+.newUserForm {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid #e8edf4;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.newUserItem {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.newUserItem > label {
+  color: #66768b;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.newUserItem > input,
+.newUserSelect {
+  width: 100%;
+  min-height: 43px;
+  padding: 0 12px;
+  border: 1px solid #dfe6ef;
+  border-radius: 8px;
+  background: #fbfcfe;
+  color: #25354b;
+}
+
+.newUserItem > input:focus,
+.newUserSelect:focus {
+  border-color: #7892ed;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.12);
+}
+
+.newUserButton {
+  min-height: 43px;
+  align-self: end;
+  justify-self: start;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #5578ed, #3f5fd1);
+  box-shadow: 0 6px 14px rgba(65, 105, 225, 0.18);
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.newUserButton:hover:not(:disabled) {
+  background: #3154c6;
+}
+
+.newUserButton:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+@media (max-width: 600px) {
+  .newUserForm {
+    grid-template-columns: 1fr;
+  }
+}

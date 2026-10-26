@@ -1,0 +1,280 @@
+.userList {
+  min-width: 0;
+}
+
+.userListTitle {
+  margin: 0 0 22px;
+  color: #1d2b40;
+  font-size: 30px;
+  letter-spacing: -0.8px;
+}
+
+.userListBackButton {
+  min-height: 40px;
+  margin-bottom: 18px;
+  padding: 0 15px;
+  border: 1px solid #dfe6ef;
+  border-radius: 9px;
+  background: #fff;
+  color: #4f6076;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.userListBackButton:hover {
+  border-color: #cdd8e8;
+  background: #f7f9fc;
+}
+
+.userListTableContainer {
+  overflow-x: auto;
+  border: 1px solid #e8edf4;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.userListTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.userListTable th,
+.userListTable td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #edf1f6;
+  white-space: nowrap;
+}
+
+.userListTable th {
+  background: #f8faff;
+  color: #738198;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+}
+
+.userListTable td {
+  color: #4d5c70;
+  font-size: 13px;
+}
+
+.userListTable tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.userListTable tbody tr:hover {
+  background: #fbfcff;
+}
+
+.userListUser {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #27374d !important;
+  font-weight: 600;
+}
+
+.userListAvatar {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #edf2ff;
+  color: #4b66d1;
+  font-weight: 700;
+}
+
+.userListImg {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userListEdit {
+  min-height: 32px;
+  padding: 0 11px;
+  border: 0;
+  border-radius: 7px;
+  background: #edf2ff;
+  color: #3f60cf;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.userListEdit:hover {
+  background: #e0e8ff;
+}
+
+.userListDelete {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 8px;
+  background: #fff1f1;
+  color: #dc4e5e;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.userListDelete:hover:not(:disabled) {
+  background: #ffe1e3;
+}
+
+.userListDelete:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.userListActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.deleteConfirmOverlay {
+  position: fixed;
+  z-index: 1200;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(22, 34, 52, 0.42);
+  backdrop-filter: blur(4px);
+  animation: deleteOverlayIn 160ms ease-out;
+}
+
+.deleteConfirmDialog {
+  width: min(100%, 420px);
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(20, 34, 55, 0.24);
+  text-align: center;
+  animation: deleteDialogIn 180ms ease-out;
+}
+
+.deleteConfirmIcon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  margin: 0 auto 17px;
+  border-radius: 16px;
+  background: #fff0f0;
+  color: #dc4e5e;
+}
+
+.deleteConfirmDialog h2 {
+  margin: 0;
+  color: #1f2e43;
+  font-size: 21px;
+  letter-spacing: -0.4px;
+}
+
+.deleteConfirmDialog p {
+  margin: 10px 0 24px;
+  color: #78879b;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.deleteConfirmDialog p strong {
+  color: #34445a;
+  font-weight: 700;
+}
+
+.deleteConfirmActions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.deleteConfirmActions button {
+  min-height: 42px;
+  padding: 0 17px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 650;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.deleteConfirmActions button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.deleteConfirmActions button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.deleteConfirmCancel {
+  border: 1px solid #dfe6ef;
+  background: #fff;
+  color: #53647a;
+}
+
+.deleteConfirmCancel:hover:not(:disabled) {
+  background: #f7f9fc;
+}
+
+.deleteConfirmSubmit {
+  border: 1px solid #dc4e5e;
+  background: #dc4e5e;
+  color: #fff;
+}
+
+.deleteConfirmSubmit:hover:not(:disabled) {
+  border-color: #c83b4d;
+  background: #c83b4d;
+}
+
+@keyframes deleteOverlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes deleteDialogIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deleteConfirmOverlay,
+  .deleteConfirmDialog {
+    animation: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .deleteConfirmDialog {
+    padding: 25px 20px;
+  }
+
+  .deleteConfirmActions {
+    flex-direction: column-reverse;
+  }
+}
